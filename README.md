@@ -1,6 +1,6 @@
-#general-service-test
+# general-service-test
 
-##Создание и сборка нового проекта spring-boot
+## Создание и сборка нового проекта spring-boot
 ```
 curl https://start.spring.io/starter.zip \
   -d dependencies=web,security,jpa,activemq \
