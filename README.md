@@ -31,5 +31,5 @@ git add README.md
 
 ## Ресурсы
 
-http://localhost:8080/add?name=sacascasc
+http://localhost:8080/add?name=sacascasc \
 http://localhost:8080/all
