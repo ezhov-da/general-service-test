@@ -1,3 +1,9 @@
-spring
-  jpa
-    hibernate.ddl-auto=create-drop
+spring:
+  jpa:
+    hibernate.ddl-auto: create-drop
+#https://springframework.guru/using-yaml-in-spring-boot-to-configure-logback/
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.hibernate: DEBUG
+    ru.ezhov: DEBUG

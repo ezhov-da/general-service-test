@@ -31,5 +31,8 @@ git add README.md
 
 ## Ресурсы
 
-http://localhost:8080/add?name=sacascasc \
-http://localhost:8080/all
+```
+curl -X GET http://localhost:8080/add?name=sacascasc
+curl -X GET http://localhost:8080/all
+curl -H "Content-Type:application/xml" -X POST --data @./test.xml http://localhost:8080/data
+```
