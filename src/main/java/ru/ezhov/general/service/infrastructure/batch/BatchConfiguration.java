@@ -19,6 +19,7 @@ import ru.ezhov.general.service.domain.model.Part;
 import ru.ezhov.general.service.infrastructure.batch.part.PartItemProcessor;
 
 import javax.sql.DataSource;
+import java.util.Arrays;
 
 //http://java-is-everywhere.blogspot.com/2016/11/how-to-execute-spring-batch-job.html
 //https://spring.io/guides/gs/batch-processing/
@@ -34,7 +35,7 @@ public class BatchConfiguration {
 
     @Bean
     public ListItemReader<String> reader() {
-        return new ListItemReader<String>();
+        return new ListItemReader<String>(Arrays.asList("1", "1"));
     }
 
     @Bean
@@ -64,7 +65,7 @@ public class BatchConfiguration {
     @Bean
     public Step step1(JdbcBatchItemWriter<Part> writer) {
         return stepBuilderFactory.get("step1")
-                .<String, Part> chunk(10)
+                .<String, Part>chunk(10)
                 .reader(reader())
                 .processor(processor())
                 .writer(writer)
