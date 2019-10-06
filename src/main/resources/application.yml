@@ -4,6 +4,6 @@ spring:
 #https://springframework.guru/using-yaml-in-spring-boot-to-configure-logback/
 logging:
   level:
-    org.springframework.web: DEBUG
-    org.hibernate: DEBUG
+    org.springframework.web: INFO
+    org.hibernate: INFO
     ru.ezhov: DEBUG
